@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: avipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: avipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: avipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: avipipelinesjavascriptdocker 
+          image: aksreg123321.azurecr.io/avipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
